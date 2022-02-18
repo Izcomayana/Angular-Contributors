@@ -97,14 +97,14 @@
     margin: 0 auto;
   }
 
-  .members-container {
-    /* border: 2px solid yellow; */
+  /* .members-container {
+    border: 2px solid yellow;
     
-  }
+  } */
 
   .search-and-sort {
     /* border: 2px solid rgb(247, 0, 255); */
-    width: 60%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -159,22 +159,24 @@
   table {
     border-collapse: collapse;
     border-spacing: 0;
+    overflow-x: auto;
     width: 100%;
     border: 3px solid rgb(75, 75, 75);
   }
 
   th, td {
     text-align: center;
-    padding: 16px;
+    padding: 0.75rem;
   }
 
   th {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
   }
 
   td {
     color: rgb(230, 230, 230);
+    font-size: 0.85rem;
   }
 
   .login {
@@ -201,6 +203,10 @@
   } */
 
   @media (max-width: 768px) {
+    .orgs-members {
+      width: 100%;
+    }
+
     .members-container {
       width: 100%;
       text-align: center;
@@ -213,21 +219,50 @@
     .search-input {
       width: 35%;
     }
-  }
 
-  @media (max-width: 600px) {
-    .orgs-members {
-      width: 100%;
+    th {
+      font-weight: 400;
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
+    th {
+      font-size: 0.75rem;
+    }
+
+    td {
+      padding: 0.25rem;
+      font-size: 0.5rem;
+    }
+  }
+
+  @media (max-width: 400px) {
     .search-input {
       width: 50%;
     }
 
     .members {
       font-size: 0.8rem;
+    }
+
+    th {
+      font-size: 0.5rem;
+    }
+
+    td {
+      padding: 0.1rem;
+      font-size: 0.25rem;
+    }
+  }
+
+  @media (max-width: 300px) {
+    th {
+      font-size: 0.35rem;
+    }
+
+    td {
+      padding: 0.1rem;
+      font-size: 0.25rem;
     }
   }
 </style>

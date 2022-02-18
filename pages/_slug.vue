@@ -21,6 +21,7 @@
   import axios from 'axios';
 
   export default {
+    layout: 'slug',
     async asyncData () {
       const { data } = await axios.get('https://api.github.com/repos/angular/angular/contributors')
       return {
@@ -35,7 +36,8 @@
     /* border: 2px solid green; */
     width: 75%;
     margin: 0 auto;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
+    padding: 2rem 0;
     text-align: center;
   }
 
@@ -50,7 +52,7 @@
 
   .img-container {
     /* border: 2px solid yellow; */
-    width: 50%;
+    width: 75%;
     margin: 2rem auto;
   }
 
@@ -65,12 +67,36 @@
   }
 
   .other-infos p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .info-headings {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: rgb(201, 201, 201);
+  }
+
+  @media (max-width: 768px) {
+    .about-contributors {
+      width: 100%;
+    }
+
+    .other-infos p {
+      font-size: 1.25rem;
+    }
+
+    .info-headings {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .other-infos p {
+      font-size: 1rem;
+    }
+
+    .info-headings {
+      font-size: 1.25rem;
+    }
   }
 </style>

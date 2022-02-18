@@ -1,5 +1,5 @@
 <template>
-  <div class="home-layout">
+  <div class="slug-layout">
     <Header />
     <AppHeader />
     <Nuxt />
@@ -19,14 +19,14 @@
 </script>
 
 <style >
-  .home-layout {
+  .slug-layout {
     background: #0d1117;
     color: white;
   }
 
   @media (max-width: 400px) {
-    .home-layout {
+    /* .slug-layout {
       height: 100vh;
-    }
+    } */
   }
 </style>

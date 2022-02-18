@@ -71,6 +71,8 @@
   @media (max-width: 768px) {
     .appHeader-container {
       text-align: center;
+      width: 90%;
+      margin: 0 auto;
     }
 
     ul {
