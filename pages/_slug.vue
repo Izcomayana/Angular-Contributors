@@ -33,25 +33,19 @@
 
 <style scoped>
   .contributor-container {
-    /* border: 2px solid green; */
     width: 75%;
     margin: 0 auto;
-    /* margin-top: 5rem; */
     padding: 2rem 0;
     text-align: center;
   }
 
   .about-contributors {
-    /* border: 2px solid red; */
     width: 50%;
     margin: 0 auto;
-    /* display: flex;
-    justify-content: space-between; */
     
   }
 
   .img-container {
-    /* border: 2px solid yellow; */
     width: 75%;
     margin: 2rem auto;
   }
@@ -61,7 +55,6 @@
   }
 
   .other-infos {
-    /* border: 2px solid rgb(0, 255, 221); */
     width: 99%;
     text-align: center;
   }

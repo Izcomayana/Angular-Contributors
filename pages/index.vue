@@ -43,18 +43,6 @@
   import axios from 'axios';
 
   export default {
-    // data() {
-    //   return {
-    //     currentPage: 1,
-    //     repos: []
-    //   }
-    // },
-    // async fetch () {
-    //   const repos = await fetch(`https://api.github.com/repos/angular/angular/contributors?tag=nuxt&state=rising&page=${this.currentPage}`)
-    //   .then((res) => res.json())
-
-    //   this.repos = this.repos.concat(repos)
-    // },
     async asyncData({ query, error }) {
       let pageRes = await axios.get('https://api.github.com/repos/angular/angular/contributors')
       let countRes = await axios.get('https://api.github.com/users/gkalpak')
@@ -63,47 +51,21 @@
         users: countRes.data
       }
     }
-    // async asyncData () {
-    //   const { data } = await axios.get('https://api.github.com/repos/angular/angular/contributors')
-    //   return {
-    //     repos: data
-    //   }
-    // },
-    // data () {
-    //   return {
-    //     logins: repo.login
-    //   }
-    // },
-    // computed: {
-    //   names () {
-    //     return this.logins.filter(name => {
-    //       return name % 2
-    //     })
-    //   }
-    // }
   }
 </script>
 
 <style>
   .home-page {
-    /* border: 2px solid red; */
     color: white;
     margin-top: 1rem;
   }
 
   .orgs-members {
-    /* border: 2px solid green; */
     width: 75%;
     margin: 0 auto;
   }
 
-  /* .members-container {
-    border: 2px solid yellow;
-    
-  } */
-
   .search-and-sort {
-    /* border: 2px solid rgb(247, 0, 255); */
     width: 75%;
     display: flex;
     justify-content: space-between;
@@ -111,7 +73,6 @@
   }
 
   .search-input {
-    /* border: 2px solid rgb(0, 255, 255); */
     border: 0.1px solid rgb(75, 75, 75);
     border-radius: 10px;
     width: 40%;
@@ -120,11 +81,7 @@
     color: rgb(230, 230, 230);
   }
 
-  /* .sort-and-drop {
-  } */
-
   .custom-select {
-    /* border: 2px solid rgb(255, 0, 242); */
     width: 40%;
     border-radius: 10px;
     cursor: pointer;
@@ -193,14 +150,6 @@
     background-color: rgb(49, 49, 49);
     border: 2px solid rgb(75, 75, 75);
   }
-
-  /* img {
-    width: 10%;
-  } */
-
-  /* p {
-    font-size: 2rem;
-  } */
 
   @media (max-width: 768px) {
     .orgs-members {
